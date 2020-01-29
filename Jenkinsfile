@@ -14,7 +14,7 @@ pipeline {
 
     stage('Create conf file cluster') {
       steps {
-        withAWS(region: 'us-east-1', credentials: '292152339671') {
+        withAWS(region: 'us-west-2', credentials: '292152339671') {
           sh '''
 						aws eks --region us-west-2 update-kubeconfig --name capstonecluster
 					'''
